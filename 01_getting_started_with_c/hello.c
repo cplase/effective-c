@@ -2,6 +2,10 @@
 #include <stdlib.h>
 
 int main(void) {
-  puts("Hello, world!");
+  if (puts("Hello, world!") == EOF) {
+    return EXIT_FAILURE;
+    // code here never executes
+  }
   return EXIT_SUCCESS;
+  // code here never executes
 }
